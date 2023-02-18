@@ -9,5 +9,5 @@ const titleOfElement = children[0].textContent;
 console.log('Category:', titleOfElement);
 
 const lengthOfListOfElement = children[1].children.length;
-console.log('Elements:',lengthOfListOfElement);
+console.log('Elements:', lengthOfListOfElement);
 });
