@@ -17,7 +17,6 @@ console.log('Number of categories:', numberOfCategories);
 
 const allTitleEl = document.querySelectorAll('h2');
 const arrayTitleEl = [...allTitleEl];
-const getNamesEl = allTitle => {
-    [...allTitle].map(el => el.textContent);
-};
-console.log(getNamesEl(arrayTitleEl));
+for (const el of arrayTitleEl) {
+  console.log('Category:', el.textContent);
+}
