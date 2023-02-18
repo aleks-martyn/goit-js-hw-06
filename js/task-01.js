@@ -16,8 +16,7 @@ const numberOfCategories = itemByClass.length;
 console.log('Number of categories:', numberOfCategories);
 
 const allTitleEl = document.querySelectorAll('h2');
-const arrayTitleEl = [...allTitleEl];
-for (const el of arrayTitleEl) {
+ allTitleEl.forEach(el => {
   console.log('Category:', el.textContent);
-  console.log('Elements:', )
-}
+  console.log('Elements:', );
+});
