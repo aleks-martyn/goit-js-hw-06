@@ -19,4 +19,5 @@ const allTitleEl = document.querySelectorAll('h2');
 const arrayTitleEl = [...allTitleEl];
 for (const el of arrayTitleEl) {
   console.log('Category:', el.textContent);
+  console.log('Elements:', )
 }
