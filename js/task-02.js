@@ -9,14 +9,17 @@ const ingredients = [
 
 const listEl = document.querySelector('#ingredients');
 
-const elements = ingredients.map(ingredient => {
+const makeIngredientsList = arrayOfIngredients => {
+return arrayOfIngredients.map(ingredient => {
   const listItem = document.createElement('li');
   listItem.textContent = ingredient;
   listItem.classList.add('item');
 
   return listItem;
-});
+  });
+};
 
+const elements = makeIngredientsList(ingredients);
 console.log(elements);
 
 listEl.append(...elements);
