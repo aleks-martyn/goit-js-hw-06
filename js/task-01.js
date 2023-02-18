@@ -3,9 +3,9 @@ const itemsByClass = document.querySelectorAll('.item');
 const numberOfCategories = itemsByClass.length;
 console.log('Number of categories:', numberOfCategories);
 
-itemsByClass.forEach(item => {
+itemsByClass.forEach(({children}) => {
 
-const itemElements = item.children;
+const itemElements = children;
 
 const titleOfElement = itemElements[0].textContent;
 console.log('Category:', titleOfElement);
