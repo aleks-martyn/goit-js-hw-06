@@ -2,13 +2,13 @@ const listWithId = document.querySelector('#categories');
 console.log(listWithId);
 
 
-const itemByClass = document.querySelectorAll('.item');
-console.log(itemByClass);
+const itemsByClass = document.querySelectorAll('.item');
+console.log(itemsByClass);
 
-const numberOfCategories = itemByClass.length;
+const numberOfCategories = itemsByClass.length;
 console.log('Number of categories:', numberOfCategories);
 
-const itemElements = itemByClass[0].children;
+const itemElements = itemsByClass[0].children;
 console.log(itemElements);
 
 const titleOfElement = itemElements[0].textContent;
