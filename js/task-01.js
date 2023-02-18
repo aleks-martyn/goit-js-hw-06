@@ -15,6 +15,9 @@ console.log(itemByClass[2]);
 const numberOfCategories = itemByClass.length;
 console.log('Number of categories:', numberOfCategories);
 
-const animalsTitleEl = document.querySelector('h2');
-console.log(animalsTitleEl);
-console.log(animalsTitleEl.textContent);
+const allTitleEl = document.querySelectorAll('h2');
+const arrayTitleEl = [...allTitleEl];
+const getNamesEl = allTitle => {
+    [...allTitle].map(el => el.textContent);
+};
+console.log(getNamesEl(arrayTitleEl));
