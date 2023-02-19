@@ -13,21 +13,18 @@ const images = [
   },
 ];
 
-const galleryEl = document.querySelector('.gallery');
-console.log(galleryEl);
-console.log(images);
-
-const makeImageMarkup = ({url, alt}) => {
-  console.log({url, alt});
+const makeImageMarkup = ({ url, alt }) => {
   return `
-  <li>
-    <img url='${url}' alt='${alt}'/>
+  <li class="gallery__item">
+    <img class="gallery__picture" src="${url}" alt="${alt}"/>
   </li>
   `;
-}; 
+};
 
-const makeImagesGallery = images
-.map(makeImageMarkup)
-.join(' ');
+const makeImagesGallery = images.map(makeImageMarkup).join('');
+
+const galleryEl = document.querySelector('.gallery');
+
+galleryEl.insertAdjacentHTML('afterbegin', makeImagesGallery);
 
 console.log(makeImagesGallery);
