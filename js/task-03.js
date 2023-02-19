@@ -17,7 +17,7 @@ const galleryEl = document.querySelector('.gallery');
 console.log(galleryEl);
 console.log(images);
 
-const makeImagesMarkup = ({url, alt}) => {
+const makeImageMarkup = ({url, alt}) => {
   console.log({url, alt});
   return `
   <li>
@@ -26,4 +26,8 @@ const makeImagesMarkup = ({url, alt}) => {
   `;
 }; 
 
-console.log(makeImagesMarkup(images[0]));
+const makeImagesGallery = images
+.map(makeImageMarkup)
+.join(' ');
+
+console.log(makeImagesGallery);
