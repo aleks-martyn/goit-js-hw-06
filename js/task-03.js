@@ -17,11 +17,11 @@ const galleryEl = document.querySelector('.gallery');
 console.log(galleryEl);
 console.log(images);
 
-const makeImagesMarkup = image => {
-  console.log(image);
+const makeImagesMarkup = ({url, alt}) => {
+  console.log({url, alt});
   return `
   <li>
-    <img url='${image.url}' alt='${image.alt}'/>
+    <img url='${url}' alt='${alt}'/>
   </li>
   `;
 }; 
