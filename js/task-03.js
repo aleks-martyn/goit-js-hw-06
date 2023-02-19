@@ -12,3 +12,18 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryEl = document.querySelector('.gallery');
+console.log(galleryEl);
+console.log(images);
+
+const makeImagesMarkup = image => {
+  console.log(image);
+  return `
+  <li>
+    <img url='${image.url}' alt='${image.alt}'/>
+  </li>
+  `;
+}; 
+
+console.log(makeImagesMarkup(images[0]));
