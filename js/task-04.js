@@ -6,4 +6,17 @@ const incrementBtn = document.querySelector(
   'button[data-action = "increment"]',
 );
 
-console.log(incrementBtn.dataset.action);
+let counterValue = 0;
+
+decrementBtn.addEventListener('click', toDecrementValue);
+incrementBtn.addEventListener('click', toIncrementValue);
+
+function toDecrementValue(event) {
+  counterValue -= 1;
+  spanEl.textContent = counterValue;
+}
+
+function toIncrementValue(event) {
+  counterValue += 1;
+  spanEl.textContent = counterValue;
+}
