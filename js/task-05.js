@@ -6,9 +6,8 @@ const refs = {
 refs.input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-  refs.nameLabel.textContent = event.currentTarget.value.trim();
-
-  if (refs.nameLabel.textContent.length === 0) {
-    refs.nameLabel.textContent = 'Anonymous';
-  }
+  refs.nameLabel.textContent =
+    event.currentTarget.value.trim().length === 0
+      ? 'Anonymous'
+      : event.currentTarget.value.trim();
 }
