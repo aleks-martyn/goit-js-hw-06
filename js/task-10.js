@@ -1,7 +1,3 @@
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
-
 const inputEl = document.querySelector('input');
 
 const createBtnEl = document.querySelector('button[data-create]');
@@ -30,6 +26,10 @@ function createBoxes(amount) {
   boxesEl.append(...arrayBoxes);
   boxesEl.style.cssText =
     'margin-top: 5px; display: flex; flex-direction: column; gap: 5px; align-items: center';
+}
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
 function destroyBoxes() {
